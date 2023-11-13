@@ -1,4 +1,9 @@
-# GHC flakr - Run Haskell scripts. NOW.
+<p align="center">
+  <img src="https://github.com/wireapp/ghc-flakr/actions/workflows/test-flake.yml/badge.svg"/>
+  <img src="https://img.shields.io/badge/built%20with-nix-5277C3?logo=nixos"/>
+</p>
+
+<h1 align="center"> GHC flakr - Run Haskell scripts. NOW. </h1>
 
 ## Using for running
 
