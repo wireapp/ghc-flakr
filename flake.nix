@@ -28,21 +28,7 @@
         };
         apps = rec {
           default = hs-run;
-          /*
-          NOTE:
-          - if no arguments are supplied, try to run ./main.hs
-          - if any arguments are supplied, pass them on to runghc
-          */
-          hs-run.program = pkgs.writeShellScriptBin "hs-run" ''
-            args="$@";
-            if [ $# -eq 0 ]
-            then
-              args="main.hs";
-            fi
-            ${lib.getExe' config.packages.ghc "runghc"} \
-              -f ${lib.getExe' config.packages.ghc "ghc"} \
-              $args
-          '';
+          hs-run.program = config.packages.hs-run;
         };
         packages = let
           /*
@@ -60,7 +46,24 @@
               overrides = hself: hsuper: {
               };
             };
-        in {
+        in rec {
+          default = hs-run;
+          /*
+          NOTE:
+          - if no arguments are supplied, try to run ./main.hs
+          - if any arguments are supplied, pass them on to runghc
+          */
+          hs-run = pkgs.writeShellScriptBin "hs-run" ''
+            args="$@";
+            if [ $# -eq 0 ]
+            then
+              args="main.hs";
+            fi
+            ${lib.getExe' config.packages.ghc "runghc"} \
+              -f ${lib.getExe' config.packages.ghc "ghc"} \
+              $args
+          '';
+
           /*
           NOTE:
           - take tooling from the haskell packageset

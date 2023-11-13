@@ -46,6 +46,16 @@
   - [the pre-commit-hooks.nix docs](https://flake.parts/options/pre-commit-hooks-nix) ([upstream repository](https://github.com/cachix/pre-commit-hooks.nix))
 - run `direnv allow`, `devshell` will tell you about available commands (use `menu` to be reminded)
 
+## Installing globally
+
+*requirements*
+- a `nix` installation with `nix-commmand` and `flakes` experimental features enabled
+
+*usage:*
+- to install: `nix profile install github:wireapp/ghc-flakr`
+- to remove: `nix profile remove ghc-flakr`
+- to use: this flake provides a single executable, `hs-run` that works as with `nix run` (see above)
+
 ## Contributing
 
 This is mainly supposed to be a way to allow the wire backend team to easily write scripts in Haskell, so there's two possibilies:
