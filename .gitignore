@@ -1,0 +1,5 @@
+result*
+.direnv
+*.o
+*.hi
+.pre-commit-config.yaml
