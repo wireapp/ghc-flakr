@@ -24,7 +24,9 @@
   main = do
     putStrLn "Hello flakr user"
   ```
-- `chmod +x ./main.hs`
+- ```bash
+  chmod +x ./main.hs
+  ```
 - `./main.hs` should print `Hello flakr user`
 
 ## Using it to create a devShell
@@ -39,12 +41,23 @@
 - a `direnv` installation with `nix-direnv` support
 
 *usage:*
-- run `nix flake init -t github:wireapp/ghc-flakr`
+- run
+  ```bash
+  nix flake init -t github:wireapp/ghc-flakr`
+  ```
 - edit `flake.nix` to your liking, for more information, refer to
   - [the flake parts docs](https://flake.parts/)
   - [the devshell docs](https://flake.parts/options/devshell) ([upstream repository](https://github.com/numtide/devshell))
   - [the pre-commit-hooks.nix docs](https://flake.parts/options/pre-commit-hooks-nix) ([upstream repository](https://github.com/cachix/pre-commit-hooks.nix))
-- run `direnv allow`, `devshell` will tell you about available commands (use `menu` to be reminded)
+- run
+  ```bash
+  direnv allow
+  ```
+  or
+  ```bash
+  nix develop
+  ```
+  `devshell` will tell you about available commands (use `menu` to be reminded)
 
 ## Installing globally
 
@@ -52,8 +65,14 @@
 - a `nix` installation with `nix-commmand` and `flakes` experimental features enabled
 
 *usage:*
-- to install: `nix profile install github:wireapp/ghc-flakr`
-- to remove: `nix profile remove ghc-flakr`
+- to install:
+  ```bash
+  nix profile install github:wireapp/ghc-flakr
+  ```
+- to remove:
+  ```bash
+  nix profile remove ghc-flakr
+  ```
 - to use: this flake provides a single executable, `hs-run` that works as with `nix run` (see above)
 
 ## Contributing
