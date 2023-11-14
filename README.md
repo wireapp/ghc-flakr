@@ -94,6 +94,18 @@
 - [Las about using GHCi as his shell](https://las.rs/blog/haskell-as-shell.html)
 - [Gabriella about using Haskell for shell scripting](https://www.haskellforall.com/2015/01/use-haskell-for-shell-scripting.html)
 
+## Caching
+
+- there's a cachix available at https://ghc-flakr.cachix.org
+- to use it, run
+  ```bash
+  cachix use ghc-flakr
+  ```
+  or add the appropriate settings in your `trusted-subsituters`, the public key is
+  ```
+  ghc-flakr.cachix.org-1:y2jnE5kv6OksYl+ZPis1pmWHCSa8el+FVCjcQI5LKx0=
+  ```
+
 ## Contributing
 
 This is mainly supposed to be a way to allow the wire backend team to easily write scripts in Haskell, so there's two possibilies:
