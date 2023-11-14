@@ -80,6 +80,20 @@
   ```
 - to use: this flake provides a single executable, `hs-run` that works as with `nix run` (see above)
 
+## Some resources on using Haskell as a scripting language
+
+### (Incomplete list of, maybe) Useful packages
+
+- [turtle@hackage](https://flora.pm/packages/@hackage/turtle)
+- [shelly@hackage](https://flora.pm/packages/@hackage/shelly)
+- [procex@hackage](https://flora.pm/packages/@hackage/procex)
+- [foldl@hackage](https://flora.pm/packages/@hackage/foldl)
+
+### Relevant blog-posts
+
+- [Las about using GHCi as his shell](https://las.rs/blog/haskell-as-shell.html)
+- [Gabriella about using Haskell for shell scripting](https://www.haskellforall.com/2015/01/use-haskell-for-shell-scripting.html)
+
 ## Contributing
 
 This is mainly supposed to be a way to allow the wire backend team to easily write scripts in Haskell, so there's two possibilies:
