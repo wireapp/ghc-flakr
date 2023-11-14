@@ -87,6 +87,7 @@
 - [turtle@hackage](https://flora.pm/packages/@hackage/turtle)
 - [shelly@hackage](https://flora.pm/packages/@hackage/shelly)
 - [procex@hackage](https://flora.pm/packages/@hackage/procex)
+- [ssh@hackage](https://flora.pm/packages/@hackage/shh)
 - [foldl@hackage](https://flora.pm/packages/@hackage/foldl)
 
 ### Relevant blog-posts
