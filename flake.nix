@@ -6,6 +6,7 @@
     parts.url = "github:hercules-ci/flake-parts";
     devshell.url = "github:numtide/devshell";
     pre-commit.url = "github:cachix/pre-commit-hooks.nix";
+    flake-compat.url = "github:edolstra/flake-compat";
   };
 
   outputs = inputs:
