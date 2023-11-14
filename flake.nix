@@ -21,10 +21,13 @@
       }: {
         pre-commit = {
           check.enable = true;
-          settings.hooks = {
-            alejandra.enable = true;
-            ormolu.enable = true;
-            hlint.enable = true;
+          settings = {
+            hooks = {
+              alejandra.enable = true;
+              ormolu.enable = true;
+              hlint.enable = true;
+            };
+            default_stages = [];
           };
         };
         apps = rec {
@@ -83,6 +86,20 @@
             ]);
         };
         devshells = {
+          formatting = {
+            commands = [
+              {
+                name = "fmt";
+                help = "format all files";
+                command = "pre-commit run --all-files";
+              }
+            ];
+            devshell = {
+              startup = {
+                pre-commit.text = config.pre-commit.installationScript;
+              };
+            };
+          };
           default = {
             packages = [
               /*
@@ -99,11 +116,6 @@
             ];
             commands = [
               {
-                name = "fmt";
-                help = "format all files";
-                command = "pre-commit run --all-files";
-              }
-              {
                 name = "run";
                 help = "run a haskell script";
                 command =
@@ -113,12 +125,6 @@
                   ''nix run .# -- "$@"'';
               }
             ];
-
-            devshell = {
-              startup = {
-                pre-commit.text = config.pre-commit.installationScript;
-              };
-            };
           };
         };
       };
