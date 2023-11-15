@@ -82,7 +82,11 @@
           ghc = hspkgs.ghcWithPackages (hps:
             with hps; [
               turtle
+              shelly
+              shh
+              foldl
               aeson
+              http-client
             ]);
         };
         devshells = {
