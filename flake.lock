@@ -1,5 +1,38 @@
 {
   "nodes": {
+    "amqp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689783018,
+        "narHash": "sha256-ov85XFztGM0mEoj01lRZN9xYJttKa/crPnp0lh4A5DA=",
+        "owner": "hreinhardt",
+        "repo": "amqp",
+        "rev": "b5dfe4362b14b58d51ec306d6871d347751f3d47",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hreinhardt",
+        "repo": "amqp",
+        "type": "github"
+      }
+    },
+    "cql-io": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1661159563,
+        "narHash": "sha256-DMRWUq4yorG5QFw2ZyF/DWnRjfnzGupx0njTiOyLzPI=",
+        "ref": "control-conn",
+        "rev": "c2b6aa995b5817ed7c78c53f72d5aa586ef87c36",
+        "revCount": 271,
+        "type": "git",
+        "url": "https://gitlab.com/wireapp/forks/cql-io.git"
+      },
+      "original": {
+        "ref": "control-conn",
+        "type": "git",
+        "url": "https://gitlab.com/wireapp/forks/cql-io.git"
+      }
+    },
     "devshell": {
       "inputs": {
         "nixpkgs": "nixpkgs",
@@ -68,7 +101,42 @@
         "type": "github"
       }
     },
+    "ghc-source-gen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1684228610,
+        "narHash": "sha256-DZu3XAOYLKcSpOYhjpb6IuXMvRHtGohTkL0nsCb/dT0=",
+        "owner": "circuithub",
+        "repo": "ghc-source-gen",
+        "rev": "7a6aac047b706508e85ba2054b5bedbecfd7eb7a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "circuithub",
+        "ref": "ghc-9.4",
+        "repo": "ghc-source-gen",
+        "type": "github"
+      }
+    },
     "gitignore": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1694102001,
+        "narHash": "sha256-vky6VPK1n1od6vXbqzOXnekrQpTL4hbPAwUhT5J9c9E=",
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "rev": "9e21c80adf67ebcb077d75bd5e7d724d21eeafd6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "type": "github"
+      }
+    },
+    "gitignore_2": {
       "inputs": {
         "nixpkgs": [
           "pre-commit",
@@ -86,6 +154,40 @@
       "original": {
         "owner": "hercules-ci",
         "repo": "gitignore.nix",
+        "type": "github"
+      }
+    },
+    "hsaml2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699865540,
+        "narHash": "sha256-jYJBhXBQ1MTLPI8JsiF2XUtgDxK+eniavNB2B1zaSQg=",
+        "owner": "wireapp",
+        "repo": "hsaml2",
+        "rev": "51d1fcecebf2417e658b9a78943c84a76a0ed347",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wireapp",
+        "ref": "update-crypto",
+        "repo": "hsaml2",
+        "type": "github"
+      }
+    },
+    "http-client": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699525930,
+        "narHash": "sha256-8NPRVDlul9Xnj6IyUOUe6w7fDt/5WWZNjR07CaAp/Kk=",
+        "owner": "wireapp",
+        "repo": "http-client",
+        "rev": "eabf64b4a8ff4c0fe6a3b39cb0f396ba8c2fb236",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wireapp",
+        "ref": "wip",
+        "repo": "http-client",
         "type": "github"
       }
     },
@@ -141,6 +243,20 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1666603677,
+        "narHash": "sha256-apAEIj+z1iwMaMJ4tB21r/VTetfGDLDzuhXRHJknIAU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "074da18a72269cc5a6cf444dce42daea5649b2fe",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1699725108,
         "narHash": "sha256-NTiPW4jRC+9puakU4Vi8WpFEirhp92kTOSThuZke+FA=",
         "owner": "nixos",
@@ -155,7 +271,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1689261696,
         "narHash": "sha256-LzfUtFs9MQRvIoQ3MfgSuipBVMXslMPH/vZ+nM40LkA=",
@@ -193,8 +309,8 @@
       "inputs": {
         "flake-compat": "flake-compat_2",
         "flake-utils": "flake-utils",
-        "gitignore": "gitignore",
-        "nixpkgs": "nixpkgs_3",
+        "gitignore": "gitignore_2",
+        "nixpkgs": "nixpkgs_4",
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
@@ -213,11 +329,39 @@
     },
     "root": {
       "inputs": {
+        "amqp": "amqp",
+        "cql-io": "cql-io",
         "devshell": "devshell",
         "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs_2",
+        "ghc-source-gen": "ghc-source-gen",
+        "gitignore": "gitignore",
+        "hsaml2": "hsaml2",
+        "http-client": "http-client",
+        "nixpkgs": "nixpkgs_3",
         "parts": "parts",
-        "pre-commit": "pre-commit"
+        "pre-commit": "pre-commit",
+        "saml2-web-sso": "saml2-web-sso",
+        "tinylog": "tinylog",
+        "transitive-anns": "transitive-anns",
+        "wai-predicates": "wai-predicates",
+        "wai-routing": "wai-routing",
+        "wire-server": "wire-server"
+      }
+    },
+    "saml2-web-sso": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700128599,
+        "narHash": "sha256-IKovI1h2Wkm3Y7Sz6XsxLOv654SgUasaWsDX6gi9hZw=",
+        "owner": "wireapp",
+        "repo": "saml2-web-sso",
+        "rev": "d50bddadf9bd9a96dd6036dad0e2dda27567ec1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wireapp",
+        "repo": "saml2-web-sso",
+        "type": "github"
       }
     },
     "systems": {
@@ -248,6 +392,91 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "tinylog": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674551828,
+        "narHash": "sha256-htEIJY+LmIMACVZrflU60+X42/g14NxUyFM7VJs4E6w=",
+        "ref": "wire-fork",
+        "rev": "9609104263e8cd2a631417c1c3ef23e090de0d09",
+        "revCount": 77,
+        "type": "git",
+        "url": "https://gitlab.com/wireapp/forks/tinylog.git"
+      },
+      "original": {
+        "ref": "wire-fork",
+        "type": "git",
+        "url": "https://gitlab.com/wireapp/forks/tinylog.git"
+      }
+    },
+    "transitive-anns": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1698134639,
+        "narHash": "sha256-8NEAHkCBlGO6xnG2K3Lllb2xiCHSYf/dSV1YrmBkOW8=",
+        "owner": "wireapp",
+        "repo": "transitive-anns",
+        "rev": "95ee8b5f9c47fe04f8f0d1321f0ade261ab9af54",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wireapp",
+        "repo": "transitive-anns",
+        "type": "github"
+      }
+    },
+    "wai-predicates": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674147808,
+        "narHash": "sha256-x2XSv2+/+DG9FXN8hfUWGNIO7V4iBhlzYz19WWKaLKQ=",
+        "ref": "develop",
+        "rev": "ff95282a982ab45cced70656475eaf2cefaa26ea",
+        "revCount": 51,
+        "type": "git",
+        "url": "https://gitlab.com/wireapp/forks/wai-predicates.git"
+      },
+      "original": {
+        "ref": "develop",
+        "type": "git",
+        "url": "https://gitlab.com/wireapp/forks/wai-predicates.git"
+      }
+    },
+    "wai-routing": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1528140847,
+        "narHash": "sha256-k0IV5jTYmoWA8TrVfbNuQIsblfZCbrYF8dowmfTkLKI=",
+        "ref": "refs/heads/develop",
+        "rev": "7e996a93fec5901767f845a50316b3c18e51a61d",
+        "revCount": 74,
+        "type": "git",
+        "url": "https://gitlab.com/twittner/wai-routing.git"
+      },
+      "original": {
+        "rev": "7e996a93fec5901767f845a50316b3c18e51a61d",
+        "type": "git",
+        "url": "https://gitlab.com/twittner/wai-routing.git"
+      }
+    },
+    "wire-server": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700228400,
+        "narHash": "sha256-EziptZd1sJFvR2dZGcStKrlqYzxJk4HLw6SaBTYqtCw=",
+        "ref": "refs/heads/develop",
+        "rev": "5d8b7fdee26faa5d859d8f35ef3f052fbf332f99",
+        "revCount": 4823,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/wireapp/wire-server.git"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/wireapp/wire-server.git"
       }
     }
   },
