@@ -5,10 +5,7 @@ on:
   push:
 jobs:
   check-flake:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest 
     steps:
     - uses: actions/checkout@v3
     - uses: cachix/install-nix-action@v22
