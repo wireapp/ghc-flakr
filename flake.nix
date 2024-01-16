@@ -90,6 +90,9 @@
               http-client-tls
               servant
               servant-client
+              text
+              bytestring
+              base64-bytestring
               optparse-applicative
             ]);
         };
