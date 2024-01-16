@@ -87,6 +87,8 @@
               foldl
               aeson
               http-client
+              servant
+              servant-client
             ]);
         };
         devshells = {
