@@ -87,6 +87,7 @@
               foldl
               aeson
               http-client
+              http-client-tls
               servant
               servant-client
               optparse-applicative
