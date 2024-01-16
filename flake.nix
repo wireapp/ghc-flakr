@@ -89,6 +89,7 @@
               http-client
               servant
               servant-client
+              optparse-applicative
             ]);
         };
         devshells = {
