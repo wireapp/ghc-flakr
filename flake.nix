@@ -81,19 +81,22 @@
           */
           ghc = hspkgs.ghcWithPackages (hps:
             with hps; [
-              turtle
-              shelly
-              shh
-              foldl
               aeson
+              base64-bytestring
+              bytestring
+              containers
+              directory
+              foldl
               http-client
               http-client-tls
+              optparse-applicative
               servant
               servant-client
+              shelly
+              shh
               text
-              bytestring
-              base64-bytestring
-              optparse-applicative
+              turtle
+              uuid
             ]);
         };
         devshells = {
